@@ -25,7 +25,7 @@ else  {
         $content | Out-File -FilePath $stage2File -Encoding UTF8
         # Debug Code: 
         Write-Host "Content successfully written to $stage2File."
-        Start-Process powershell.exe -ArgumentList "-File $stage2File", "-ExecutionPolicy Bypass", "-WindowStyle Hidden"
+        Start-Process powershell.exe -ArgumentList "-File $stage2File", "-ExecutionPolicy Bypass", "-WindowStyle Normal"
         # Debug Code:
          Write-Host "Executing stage 2 $stage2File......"
     }
